@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
     private fun onFilterChanged(filterQuery: String): List<Datum> {
         val filteredList = ArrayList<Datum>()
         for (currentSport in cafes) {
-            if (currentSport.nama.toLowerCase(Locale.getDefault()).contains(filterQuery)) {
+            if (currentSport.nama.toLowerCase(Locale.getDefault()).contains(filterQuery) || currentSport.alamat.toLowerCase(Locale.getDefault()).contains(filterQuery)  ) {
                 filteredList.add(currentSport)
             }
         }
